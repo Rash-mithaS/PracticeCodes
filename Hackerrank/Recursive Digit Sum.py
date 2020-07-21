@@ -3,15 +3,15 @@
 # Complete the superDigit function below.
 def superDigit(n):
     if int(n) > 9:
-            su=0
+            sumtotal=0
             for i in range(len(n)):
-                su += int(n[i])
-                #print(su)
-            n=str(su)
-            #print('n',n)
+                sumtotal += int(n[i])
+                
+            n=str(sumtotal)
+            
             superDigit(n)
     else:
-            #print('l')
+            
         print(int(n))
     
 nk = input().split()
@@ -20,10 +20,10 @@ n = nk[0]
 
 k = int(nk[1])
 n=str(n)
-su=0
+sumtotal=0
 for i in range(len(n)):
-    su+=int(n[i])
-n=str(su*k)
+    sumtotal+=int(n[i])
+n=str(sumtotal*k)
 result = superDigit(n)
 
 
