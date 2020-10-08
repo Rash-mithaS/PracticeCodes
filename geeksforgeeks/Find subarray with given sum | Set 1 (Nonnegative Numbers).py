@@ -20,7 +20,7 @@ There is no subarray with 0 sum
 def subArraySum(arr, n, sum):
     # Pick a starting
     subsum=0
-    p1=p2=0
+    p1=p2=0 #set pointers 1 and 2
 
 
     if sum!=0:
@@ -28,13 +28,13 @@ def subArraySum(arr, n, sum):
 
             if subsum == sum:
                 print("Sum found between indexes %d and %d" % (p2, p1 - 1))
-                return 1
+                return 1 #exit program
             elif subsum > sum:
-                subsum -= arr[p2]
-                p2 += 1
+                subsum -= arr[p2] #subtract the element p2 is pointing to
+                p2 += 1           #increment p2
             else:
-                subsum += arr[p1]
-                p1 += 1
+                subsum += arr[p1] #add the element p2 is pointing to
+                p1 += 1           #increment p1
 
     print("No subarray found")
     return 0
